@@ -63,7 +63,6 @@
     }
 }
 
-
 #logo{
     border-radius: 50px 50px 50px 50px;
     height: 100px;
@@ -78,16 +77,6 @@
 
 #logo:hover {
     transform: scale(1.05);
-}
-
-#logo:hover .logobackfoot {
-    height:30vh ;
-    width: 10vw;
-    background-color: black;
-    position:absolute;
-    border-radius: 20px;
-    border: 1px white solid;
-    display: block;
 }
 
 
@@ -113,6 +102,7 @@ body{
     overflow-x: hidden;
     position: relative;
     scroll-behavior:smooth;
+    transition: background-color 0.3s ease;
 }
 
 .hero::-webkit-scrollbar {
@@ -381,6 +371,7 @@ h1 {
             position: relative;
         }
 
+        
         .about-content {
             max-width: 800px;
             text-align: center;
@@ -502,26 +493,75 @@ h1 {
 
 /* Responsive*/
 @media screen and (max-width:764px){
+
+        #logo_moves{
+        height: 800px;
+        width: 800px;
+        position: fixed;
+        top:-400px;
+        opacity: 0.2;
+        border-radius: 100%;
+        left: -400px;
+        z-index:-1;
+        animation: rotate 100s linear infinite;
+    }
+
+    #logo_moves_2{
+        height: 4000px;
+        width: 4000px;
+        position: fixed;
+        top:-400px;
+        opacity: 0.12;
+        border-radius: 100%;
+        left: -400px;
+        z-index:-2;
+        animation: anti_rotate 200s linear infinite;
+
+    }
+
+    @keyframes anti_rotate{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform: rotate(-360deg);
+        }
+
+    }
+
+    @keyframes rotate{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
     .gitstyleintro{
         position: relative;
         border: none;
-        height: 90vh;
+        height: 75vh;
     }
     
     #logo{
+       
         position: relative; 
         height: 200px;
         width: 200px;
-        left:30px;
-
+        left:12px;
+        top: 20px;
     }
 
+    .hero{
+        background:none;
+    }
     .git_side{
         display: flex;
         flex-direction: column;
         left:-25vw;
         gap:0.4rem;
-        top:10vh;
+        top:35px;
         text-align: center;
         border: 2px white solid;
         width:99vw;
@@ -530,15 +570,16 @@ h1 {
     }
     .qoute_b{
         width: 90vw;
-        left:5vw;
 
     }
     .qoute{
-        width:90vw;
-        animation: left 1s ease;
+        width:90.3vw;
         text-align: center; 
         top:2px;
-        left:-2px;
+        left:3px;
+        font-family:monospace;
+        background-color:rgba(0, 0, 0, 0.79);
+        height:4.4vh;
     }
     .hero{
         position: absolute; 
@@ -549,18 +590,39 @@ h1 {
     }
     .nav-links{
         display: flex;
-        flex-direction:row;
-        gap: 1rem;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .nav-link{
-        top:5vh;
-        left:8vw;
-        
-        
+    .project_link{
+            height: 3vh;
+            width:13vw;
+            font-size: small;
+            border: 1px solid white;
+            justify-self: end;
+            left:-20vw;
+            display: relative;
+            padding:5px;
+            border-radius: 20px;
+            text-align: center;
+
+
+        }
+
+    .pro_link{
+        color:antiquewhite;
+        text-decoration: none;
     }
 
+    .qoute_author{
+        color: rgba(104, 100, 100, 0.73);
+        text-indent: 1px;
+        text-align: end;
+        font-size: smaller;
+        padding-top: 10px;
+    }
+
+
+  
 }
-
-
-
