@@ -104,11 +104,6 @@ td{
 
 
 
-
-
-
-
-
 #logo_moves{
     height: 1500px;
     width: 1500px;
@@ -166,3 +161,164 @@ td{
         transform: rotate(360deg);
     }
 }
+
+
+/* Responsive*/
+@media screen and (max-width:764px){
+
+        #logo_moves{
+        height: 800px;
+        width: 800px;
+        position: fixed;
+        top:-400px;
+        opacity: 0.2;
+        border-radius: 100%;
+        left: -400px;
+        z-index:-1;
+        animation: rotate 100s linear infinite;
+    }
+
+    #logo_moves_2{
+        height: 4000px;
+        width: 4000px;
+        position: fixed;
+        top:-400px;
+        opacity: 0.12;
+        border-radius: 100%;
+        left: -400px;
+        z-index:-2;
+        animation: anti_rotate 200s linear infinite;
+
+    }
+
+    @keyframes anti_rotate{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform: rotate(-360deg);
+        }
+
+    }
+
+    @keyframes rotate{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+
+    .table_flex{
+        display:flex;
+        flex-direction: column;
+        gap:2rem;
+    }
+    .project_grid{
+        display: grid;
+        gap:2rem;
+    }
+    .project{
+        height: 80vh;
+        width: 80vw;
+        border: 1px rgb(255, 255, 255) solid;
+        position: relative;
+        left:10vw;
+        top:10vh;
+        border-radius:20px;
+        z-index: 1;
+    }
+    .phase_number{
+        position: relative;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding:20px;
+        color: blanchedalmond;
+        text-decoration-color: aliceblue;
+        text-indent: 20px;
+        font-size: 30px;
+
+
+    }
+
+    .phase_head_c{
+        top:-5vh;
+        position: relative;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding:20px;
+        text-align: center;
+        color: blanchedalmond;
+    }
+
+        
+    table{ 
+        border-collapse: collapse;
+        justify-self: center;
+        border: 0.1px solid white;
+        left:1vw;
+        position: relative;
+        color:white;
+        padding-left:20px;
+        width: 80%;
+        height: 10vh;
+
+    }
+
+    th{
+        border-left:1px solid white;
+        padding:10px 12px;
+        border-bottom: 1px solid white;
+        width: 50vw;
+    }
+    tr{
+        border-left:1px solid white;
+    }
+    td{
+        border-left:1px solid white;
+        padding: 10px 12px;
+
+    }
+
+    #pro_3,#pro_4,#pro_5{
+        display:none;
+    }
+
+    #next_comming{
+
+        width:40vw;
+        height:3vh;
+        border:.5px white solid;
+        color: white;
+        padding:20px;
+        position:relative;
+        left:25vw;
+        margin-bottom:20vh;
+        font-size: 0.4rem;
+        text-align: center;
+        font-size: 15px;
+
+    }
+
+    #next_comming:hover{
+
+        background-color: rgba(73, 45, 8, 0.622);
+        transition: background-color 1s ease-in-out;
+    }
+
+    h1{
+        font-size:2rem;
+        padding:15px;
+        top:-30px;
+        left:-40px;
+        position: relative;
+
+    }
+
+
+
+
+
+}
+
+
+  
